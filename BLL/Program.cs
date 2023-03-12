@@ -1,10 +1,24 @@
+using AdminApp.BLL;
+using AdminApp.DAL;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllersWithViews();
+var configurationBuilder = new ConfigurationBuilder();
+configurationBuilder.AddJsonFile("appsettings.json");
+
+var configuration = configurationBuilder.Build();
+builder.Configuration.AddConfiguration(configuration);
+
+builder.Services
+    .AddDALServices(builder.Configuration)
+    .AddControllersWithViews();
 
 var app = builder.Build();
+
+app.Services.GetRequiredService<IDbMigrator>().Migrate();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
