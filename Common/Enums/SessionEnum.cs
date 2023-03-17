@@ -1,6 +1,6 @@
 ﻿namespace AdminApp.Common.Enums;
 
-public enum Session
+public enum SessionEnum
 {
     FirstVSPJ = 0,
     SecondVSPJ = 1,

@@ -10,10 +10,10 @@ public record RegistrationEntity : EntityBase
     public required string PhoneNumber { get; set; }
     public required DepartmentEnum Department { get; set; }
     public required DateTime BirthDate { get; set; }
-    public required Gender Gender { get; set; }
-    public ICollection<RegistrationEntity>? Roommates { get; set; }
-    public required Session Session { get; set; }
-    public required TransportMode TransportMode { get; set; }
-    public required RegistrationStatus RegistrationStatus { get; set; }
+    public required GenderEnum Gender { get; set; }
+    public ICollection<string>? Roommates { get; set; }
+    public required SchoolEnum School { get; set; }
+    public required SessionEnum Session { get; set; }
+    public required TransportModeEnum TransportMode { get; set; }
 }
 

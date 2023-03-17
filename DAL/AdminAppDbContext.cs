@@ -8,7 +8,7 @@ public class AdminAppDbContext : DbContext
 {
     private readonly bool _seedDemoData;
 
-    public AdminAppDbContext(DbContextOptions contextOptions, bool seedDemoData = false) : base(contextOptions) => _seedDemoData = seedDemoData;
+    public AdminAppDbContext(DbContextOptions contextOptions, bool seedDemoData = true) : base(contextOptions) => _seedDemoData = seedDemoData;
 
     public DbSet<RegistrationEntity> RegistrationEntities => Set<RegistrationEntity>();
     // fix later

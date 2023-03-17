@@ -33,6 +33,7 @@ public static class DALInstaller
         }
 
         services.AddSingleton<RegistrationEntityMapper>();
+        services.AddSingleton<EmailEntityMapper>();
 
 
         return services;

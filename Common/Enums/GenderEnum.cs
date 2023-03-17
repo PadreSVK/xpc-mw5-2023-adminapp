@@ -1,6 +1,6 @@
 ﻿namespace AdminApp.Common.Enums;
 
-public enum Gender
+public enum GenderEnum
 {
     Male = 0,
     Female = 1
