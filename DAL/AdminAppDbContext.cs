@@ -16,11 +16,17 @@ public class AdminAppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
 
-        modelBuilder.Entity<RegistrationEntity>().Property(i => i.EmailAddress).IsRequired();
+        modelBuilder.Entity<RegistrationEntity>()
+            .HasOne(a => a.EmailAddress)
+            .WithOne(b => b.Registration);
+            //.HasForeignKey<EmailEntity>(b => b.RegistrationId);
 
         if (_seedDemoData)
         {
+
+            EmailSeeds.Seed(modelBuilder);
             RegistrationSeeds.Seed(modelBuilder);
+            
         }
     }
 }
