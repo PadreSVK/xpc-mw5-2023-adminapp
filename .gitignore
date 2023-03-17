@@ -29,6 +29,7 @@ Obj/
 /wwwroot/dist/
 sql server/
 DAL/obj/
+DAL/obj/Debug
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
