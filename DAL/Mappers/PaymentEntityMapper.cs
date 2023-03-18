@@ -6,6 +6,9 @@ public class PaymentEntityMapper : IEntityMapper<PaymentEntity>
 {
     public void MapToExistingEntity(PaymentEntity existingEntity, PaymentEntity newEntity)
     {
-        throw new NotImplementedException();
+        existingEntity.Id = newEntity.Id;
+        existingEntity.Amount = newEntity.Amount;
+        existingEntity.ParticipantId = newEntity.ParticipantId;
+        existingEntity.Participant = newEntity.Participant;
     }
 }

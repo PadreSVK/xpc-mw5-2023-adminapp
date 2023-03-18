@@ -16,5 +16,8 @@ public class RegistrationEntityMapper : IEntityMapper<RegistrationEntity>
         existingEntity.Gender = newEntity.Gender;
         existingEntity.Roommates = newEntity.Roommates;
         existingEntity.TransportMode = newEntity.TransportMode;
+        existingEntity.Roommates = newEntity.Roommates;
+        existingEntity.ParticipantId = newEntity.ParticipantId;
+        existingEntity.Participant = newEntity.Participant;
     }
 }
