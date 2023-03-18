@@ -6,6 +6,10 @@ public class SessionEntityMapper : IEntityMapper<SessionEntity>
 {
     public void MapToExistingEntity(SessionEntity existingEntity, SessionEntity newEntity)
     {
-        throw new NotImplementedException();
+        existingEntity.Id = newEntity.Id;
+        existingEntity.SessionName = newEntity.SessionName;
+        existingEntity.Accomodation =   newEntity.Accomodation;
+        existingEntity.Camp = newEntity.Camp;
+        existingEntity.CampId = newEntity.CampId;
     }
 }

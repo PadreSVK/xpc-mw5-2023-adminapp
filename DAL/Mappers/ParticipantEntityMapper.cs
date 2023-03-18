@@ -6,7 +6,13 @@ public class ParticipantEntityMapper : IEntityMapper<ParticipantEntity>
 {
     public void MapToExistingEntity(ParticipantEntity existingEntity, ParticipantEntity newEntity)
     {
-        throw new NotImplementedException();
+        existingEntity.Id = newEntity.Id;
+        existingEntity.RegistrationStatus = newEntity.RegistrationStatus;
+        existingEntity.Registration = newEntity.Registration;
+        existingEntity.PersonalInfo = newEntity.PersonalInfo;
+        existingEntity.Accomodation = newEntity.Accomodation;
+        existingEntity.AccomodationId = newEntity.AccomodationId;
+        existingEntity.Payments = newEntity.Payments;
     }
 }
 

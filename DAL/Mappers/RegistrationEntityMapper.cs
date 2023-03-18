@@ -14,9 +14,9 @@ public class RegistrationEntityMapper : IEntityMapper<RegistrationEntity>
         existingEntity.Department = newEntity.Department;
         existingEntity.BirthDate = newEntity.BirthDate;
         existingEntity.Gender = newEntity.Gender;
-        existingEntity.Roommates = newEntity.Roommates;
-        existingEntity.School= newEntity.School;
-        existingEntity.Session = newEntity.Session;
         existingEntity.TransportMode = newEntity.TransportMode;
+        existingEntity.Roommates = newEntity.Roommates;
+        existingEntity.ParticipantId = newEntity.ParticipantId;
+        existingEntity.Participant = newEntity.Participant;
     }
 }
