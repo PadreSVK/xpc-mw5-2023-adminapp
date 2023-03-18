@@ -1,59 +1,67 @@
-import React, { Component } from 'react';
+﻿import React, { Component } from 'react';
 
 export class FetchData extends Component {
-  static displayName = FetchData.name;
+    static displayName = FetchData.name;
 
-  constructor(props) {
-    super(props);
-    this.state = { forecasts: [], loading: true };
-  }
+    constructor(props) {
+        super(props);
+        this.state = { registrations: [], loading: true };
+    }
 
-  componentDidMount() {
-    this.populateWeatherData();
-  }
+    componentDidMount() {
+        this.populateData();
+    }
 
-  static renderForecastsTable(forecasts) {
-    return (
-      <table className="table table-striped" aria-labelledby="tableLabel">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-          </tr>
-        </thead>
-        <tbody>
-          {forecasts.map(forecast =>
-            <tr key={forecast.date}>
-              <td>{forecast.date}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
-    );
-  }
+    static renderTable(registrations) {
+        return (
+            <table className="table table-striped" aria-labelledby="tableLabel">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>EmailAddress</th>
+                        <th>PhoneNumber</th>
+                        <th>Department</th>
+                        <th>BirthDate</th>
+                        <th>Gender</th>
+                        <th>TransportMode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr key={registrations.id}>
+                        <td>{registrations.id}</td>
+                        <td>{registrations.firstName}</td>
+                        <td>{registrations.lastName}</td>
+                        <td>{registrations.emailAddress.email}</td>
+                        <td>{registrations.phoneNumber}</td>
+                        <td>{registrations.department.departmentName}</td>
+                        <td>{registrations.birthDate}</td>
+                        <td>{registrations.gender}</td>
+                        <td>{registrations.transportMode}</td>
+                    </tr>
+                </tbody>
+            </table>
+        );
+    }
 
-  render() {
-    let contents = this.state.loading
-      ? <p><em>Loading...</em></p>
-      : FetchData.renderForecastsTable(this.state.forecasts);
+    render() {
+        let contents = this.state.loading
+            ? <p><em>Loading...</em></p>
+            : FetchData.renderTable(this.state.registrations);
 
-    return (
-      <div>
-        <h1 id="tableLabel">Weather forecast</h1>
-        <p>This component demonstrates fetching data from the server.</p>
-        {contents}
-      </div>
-    );
-  }
+        return (
+            <div>
+                <h1 id="tableLabel">Registration</h1>
+                <p>This component demonstrates fetching data from the server.</p>
+                {contents}
+            </div>
+        );
+    }
 
-  async populateWeatherData() {
-    const response = await fetch('weatherforecast');
-    const data = await response.json();
-    this.setState({ forecasts: data, loading: false });
-  }
+    async populateData() {
+        const response = await fetch('registration');
+        const data = await response.json();
+        this.setState({ registrations: data, loading: false });
+    }
 }

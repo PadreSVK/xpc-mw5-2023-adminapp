@@ -4,7 +4,7 @@ public class DepartmentEntity : IEntity
 {
     public required Guid Id { get; set; }
     public required string DepartmentName { get; set; }
-    public required string DepartmentNumber { get; set; }
+    public required int DepartmentNumber { get; set; }
 
     public SchoolEntity School { get; set; }
     public Guid SchoolId { get; set; }
