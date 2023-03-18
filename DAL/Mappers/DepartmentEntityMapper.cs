@@ -8,7 +8,7 @@ public class DepartmentEntityMapper : IEntityMapper<DepartmentEntity>
     {
         existingEntity.Id = newEntity.Id;
         existingEntity.DepartmentName = newEntity.DepartmentName;
-        existingEntity.DepartmentId = newEntity.DepartmentId;
+        existingEntity.DepartmentNumber = newEntity.DepartmentNumber;
         existingEntity.School = newEntity.School;
         existingEntity.SchoolId = newEntity.SchoolId; 
     }

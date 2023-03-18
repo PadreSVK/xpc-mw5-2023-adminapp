@@ -1,4 +1,6 @@
-﻿namespace AdminApp.DAL.Entities;
+﻿using AdminApp.Common.Enums;
+
+namespace AdminApp.DAL.Entities;
 
 public record ParticipantEntity : IEntity
 {
