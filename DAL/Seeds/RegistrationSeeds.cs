@@ -12,11 +12,11 @@ public static class RegistrationSeeds
         FirstName = "matej",
         LastName = "malysa",
         PhoneNumber = "777334077",
-        Department = Common.Enums.DepartmentEnum.MathematicsSLU,
+        //Department = Common.Enums.DepartmentEnum.MathematicsSLU,
         BirthDate = DateTime.Parse("5/1/2008 8:30:52 AM"),
         Gender = Common.Enums.GenderEnum.Male,
-        School = Common.Enums.SchoolEnum.VSPJ,
-        Session = Common.Enums.SessionEnum.FirstVSPJ,
+        //School = Common.Enums.SchoolEnum.VSPJ,
+        //Session = Common.Enums.SessionEnum.FirstVSPJ,
         TransportMode = Common.Enums.TransportModeEnum.Bus
         /*
         Id = Guid.Parse("db68702a-765b-43b8-8b9b-af213d69d15b"),
@@ -40,11 +40,11 @@ public static class RegistrationSeeds
         FirstName = "josef",
         LastName = "otevrel",
         PhoneNumber = "123456789",
-        Department = Common.Enums.DepartmentEnum.MathematicsVSPJ,
+        //Department = Common.Enums.DepartmentEnum.MathematicsVSPJ,
         BirthDate = DateTime.Parse("2/16/2008 12:15:12 PM"),
         Gender = Common.Enums.GenderEnum.Male,
-        School = Common.Enums.SchoolEnum.SLU,
-        Session = Common.Enums.SessionEnum.FirstSLU,
+        //School = Common.Enums.SchoolEnum.SLU,
+       // Session = Common.Enums.SessionEnum.FirstSLU,
         TransportMode = Common.Enums.TransportModeEnum.Individual
         /*
         Id = Guid.Parse("db68702a-764b-43b8-8b9b-af213d69d15b"),
