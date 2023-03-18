@@ -9,12 +9,12 @@ public record RegistrationEntity : IEntity
     public required string LastName { get; set;}
     public EmailEntity EmailAddress { get; set; }
     public required string PhoneNumber { get; set; }
-    public required DepartmentEnum Department { get; set; }
+    public DepartmentEntity Department { get; set; }
     public required DateTime BirthDate { get; set; }
     public required GenderEnum Gender { get; set; }
-    public ICollection<EmailEntity> Roommates { get; set; } = new List<EmailEntity>();
-    public required SchoolEnum School { get; set; }
-    public required SessionEnum Session { get; set; }
+    public ICollection<RoomMateEntity> Roommates { get; set; } = new List<RoomMateEntity>();
     public required TransportModeEnum TransportMode { get; set; }
+    public Guid ParticipantId { get; set; }
+    public ParticipantEntity Participant { get; set; }
 }
 

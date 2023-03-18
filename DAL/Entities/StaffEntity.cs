@@ -2,8 +2,9 @@
 
 namespace AdminApp.DAL.Entities;
 
-public record StaffEntity : EntityBase
+public record StaffEntity : IEntity
 {
+    public Guid Id { get; set; }
     public required string FirstName { get; set; }
     public required string LastName { get; set; }
     public required string EmailAddress { get; set; }
@@ -13,5 +14,6 @@ public record StaffEntity : EntityBase
     public required GenderEnum Gender { get; set; }
     public required SchoolEnum School { get; set; }
     public required SessionEnum Session { get; set; }
+    
 }
 

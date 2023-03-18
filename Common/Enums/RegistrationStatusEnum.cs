@@ -1,6 +1,6 @@
 ﻿namespace AdminApp.Common.Enums;
 
-public enum RegistrationStatus
+public enum RegistrationStatusEnum
 {
     Registered = 0,
     DepositPaid = 1,

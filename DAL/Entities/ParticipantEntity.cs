@@ -2,10 +2,15 @@
 
 namespace AdminApp.DAL.Entities;
 
-public record ParticipantEntity : EntityBase
+public record ParticipantEntity : IEntity
 {
-    public required RegistrationEntity Registration { get; set; }
-    public PaymentEntity? Payment { get; set; } 
-    public PersonalInfoEntity? PersonalInfo { get; set; }
+    public required Guid Id { get; set; }
+    public required RegistrationStatusEnum RegistrationStatus { get; set; }
+    public RegistrationEntity Registration { get; set; }
+    public PersonalInfoEntity PersonalInfo { get; set; }
+    public AccomodationEntity Accomodation { get; set; }
+    public Guid AccomodationId { get; set; }
+    public ICollection<PaymentEntity> Payments { get; set; } = new List<PaymentEntity>();
+
 }
 
