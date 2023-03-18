@@ -7,7 +7,7 @@ public class SqlServerDbContextFactory : IDbContextFactory<AdminAppDbContext>
     private readonly bool _seedDemoData;
     private readonly DbContextOptionsBuilder<AdminAppDbContext> _contextOptionsBuilder = new();
 
-    public SqlServerDbContextFactory(string connectionString, bool seedDemoData = false)
+    public SqlServerDbContextFactory(string connectionString, bool seedDemoData = true)
     {
         _seedDemoData = seedDemoData;
         _contextOptionsBuilder.UseSqlServer(connectionString);

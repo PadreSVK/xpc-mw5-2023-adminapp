@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "YM1ArywOIpGFD86msx3mrtscb1oUt3Bzq8jvIy2hhaMqtutHf64OCgbhkGDWfKGpsT4lWxmGqX7+2b3Ezv9fjw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\matej\\source\\repos\\WebApp\\DAL\\DAL.csproj",
+  "projectFilePath": "C:\\Users\\pepao\\source\\repos\\xpc-mw5-2023-adminapp\\DAL\\DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matej\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\matej\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

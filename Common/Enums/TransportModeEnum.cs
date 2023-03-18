@@ -1,6 +1,6 @@
 ﻿namespace AdminApp.Common.Enums;
 
-public enum TransportMode
+public enum TransportModeEnum
 {
     Bus = 0,
     Individual = 1

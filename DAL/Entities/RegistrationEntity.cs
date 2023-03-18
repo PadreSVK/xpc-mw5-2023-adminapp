@@ -2,18 +2,19 @@
 
 namespace AdminApp.DAL.Entities;
 
-public record RegistrationEntity : EntityBase
+public record RegistrationEntity : IEntity
 {
-    public required string FirstName { get; set; }
-    public required string LastName { get; set; }
-    public required string EmailAddress { get; set; }
+    public required Guid Id { get; set; }
+    public required string FirstName { get; set;}
+    public required string LastName { get; set;}
+    public EmailEntity EmailAddress { get; set; }
     public required string PhoneNumber { get; set; }
-    public required DepartmentEnum Department { get; set; }
+    public DepartmentEntity Department { get; set; }
     public required DateTime BirthDate { get; set; }
-    public required Gender Gender { get; set; }
-    public ICollection<RegistrationEntity>? Roommates { get; set; }
-    public required Session Session { get; set; }
-    public required TransportMode TransportMode { get; set; }
-    public required RegistrationStatus RegistrationStatus { get; set; }
+    public required GenderEnum Gender { get; set; }
+    public required TransportModeEnum TransportMode { get; set; }
+    public ICollection<RoomMateEntity> Roommates { get; set; } = new List<RoomMateEntity>();
+    public Guid ParticipantId { get; set; }
+    public ParticipantEntity Participant { get; set; }
 }
 

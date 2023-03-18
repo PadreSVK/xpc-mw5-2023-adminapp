@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdminApp.DAL.Repositories;
 
-public class RegistrationRepository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
+public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, IEntity
 {
     private readonly DbSet<TEntity> _dbSet;
     private readonly IEntityMapper<TEntity> _entityMapper;
 
-    public RegistrationRepository(DbContext dbContext, IEntityMapper<TEntity> entityMapper)
+    public Repository(DbContext dbContext, IEntityMapper<TEntity> entityMapper)
     {
         _dbSet = dbContext.Set<TEntity>();
         _entityMapper = entityMapper;
