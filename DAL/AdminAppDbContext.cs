@@ -18,8 +18,8 @@ public class AdminAppDbContext : DbContext
 
         modelBuilder.Entity<RegistrationEntity>()
             .HasOne(a => a.EmailAddress)
-            .WithOne(b => b.Registration);
-            //.HasForeignKey<EmailEntity>(b => b.RegistrationId);
+            .WithOne(b => b.Registration)
+            .HasForeignKey<EmailEntity>(b => b.RegistrationId);
 
         if (_seedDemoData)
         {
