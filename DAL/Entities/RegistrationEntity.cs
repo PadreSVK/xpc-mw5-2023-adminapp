@@ -13,9 +13,7 @@ public record RegistrationEntity : IEntity
     public required DateTime BirthDate { get; set; }
     public required GenderEnum Gender { get; set; }
     public required TransportModeEnum TransportMode { get; set; }
-    
     public ICollection<RoomMateEntity> Roommates { get; set; } = new List<RoomMateEntity>();
-    
     public Guid ParticipantId { get; set; }
     public ParticipantEntity Participant { get; set; }
 }
