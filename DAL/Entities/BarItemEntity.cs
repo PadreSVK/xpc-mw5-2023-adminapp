@@ -9,10 +9,11 @@ public record BarItemEntity : IEntity
     public required double Unit { get;set; }
     public required int UnitPrice { get; set; }
     public required double InStock { get; set;}
-
-    public BarInventoryEntity BarInventory { get; set; }
-    public Guid BarInventoryId { get; set; }
     public DrinkIngredientEntity DrinkIngredient { get; set; }
     public Guid DrinkIngredientId { get; set; }
+    public BarInventoryEntity BarInventory { get; set; }
+    public Guid BarInventoryId { get; set; }
+    
+    
 
 }

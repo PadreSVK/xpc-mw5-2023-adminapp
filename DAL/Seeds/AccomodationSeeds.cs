@@ -19,10 +19,22 @@ public static class AccomodationSeeds
         AccomodationNumber = 2,
         SessionId = SessionSeeds.Session1.Id,
     };
+    public static readonly AccomodationEntity Accomodation3 = new()
+    {
+        Id = Guid.Parse("07e3db53-c96b-48a8-b4b4-380da759938a"),
+        AccomodationNumber = 3,
+        SessionId = SessionSeeds.Session1.Id,
+    };
+    public static readonly AccomodationEntity Accomodation4 = new()
+    {
+        Id = Guid.Parse("7ad0de6b-c0b8-4b11-a292-077994357f34"),
+        AccomodationNumber = 4,
+        SessionId = SessionSeeds.Session1.Id,
+    };
 
 
 
     public static void Seed(this ModelBuilder modelBuilder) =>
-        modelBuilder.Entity<AccomodationEntity>().HasData(Accomodation1,Accomodation2);
+        modelBuilder.Entity<AccomodationEntity>().HasData(Accomodation1,Accomodation2, Accomodation3, Accomodation4);
 
 }

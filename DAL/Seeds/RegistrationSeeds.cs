@@ -13,7 +13,7 @@ public static class RegistrationSeeds
         FirstName = "matej",
         LastName = "malysa",
         PhoneNumber = "777334077",
-        BirthDate = DateTime.Parse("5/1/2008 8:30:52 AM"),
+        BirthDate = DateTime.Parse("5/1/2000 8:30:52 AM"),
         DepartmentId = DepartmentSeeds.Department1.Id,
         Gender = Common.Enums.GenderEnum.Male,
         TransportMode = Common.Enums.TransportModeEnum.Bus,
@@ -28,7 +28,7 @@ public static class RegistrationSeeds
         FirstName = "josef",
         LastName = "otevrel",
         PhoneNumber = "879546213",
-        BirthDate = DateTime.Parse("5/1/2008 8:30:52 AM"),
+        BirthDate = DateTime.Parse("5/1/2003 8:30:52 AM"),
         DepartmentId = DepartmentSeeds.Department1.Id,
         Gender = Common.Enums.GenderEnum.Male,
         TransportMode = Common.Enums.TransportModeEnum.Bus,
@@ -42,17 +42,56 @@ public static class RegistrationSeeds
         FirstName = "Jakub",
         LastName = "Mahdal",
         PhoneNumber = "757755555",
+        BirthDate = DateTime.Parse("5/7/2002 8:30:52 AM"),
+        DepartmentId = DepartmentSeeds.Department1.Id,
+        Gender = Common.Enums.GenderEnum.Male,
+        TransportMode = Common.Enums.TransportModeEnum.Individual,
+        
+        ParticipantId = ParticipantSeeds.Participant3.Id,
+    };
+    public static readonly RegistrationEntity Registration4 = new()
+    {
+        Id = Guid.Parse("e283a736-6f1c-459d-bff9-a509fb3b1cc3"),
+        FirstName = "Pavel",
+        LastName = "Novak",
+        PhoneNumber = "757745255",
         BirthDate = DateTime.Parse("5/1/2008 8:30:52 AM"),
         DepartmentId = DepartmentSeeds.Department2.Id,
         Gender = Common.Enums.GenderEnum.Male,
         TransportMode = Common.Enums.TransportModeEnum.Bus,
-        
-        ParticipantId = ParticipantSeeds.Participant3.Id,
+
+        ParticipantId = ParticipantSeeds.Participant4.Id,
     };
-   
+    public static readonly RegistrationEntity Registration5 = new()
+    {
+        Id = Guid.Parse("55fcd15f-999a-4946-ab24-9a2bd9c4960d"),
+        FirstName = "Petra",
+        LastName = "Stastna",
+        PhoneNumber = "123456789",
+        BirthDate = DateTime.Parse("5/4/2001 8:30:52 AM"),
+        DepartmentId = DepartmentSeeds.Department2.Id,
+        Gender = Common.Enums.GenderEnum.Female,
+        TransportMode = Common.Enums.TransportModeEnum.Bus,
+
+        ParticipantId = ParticipantSeeds.Participant5.Id,
+    };
+    public static readonly RegistrationEntity Registration6 = new()
+    {
+        Id = Guid.Parse("3ff8f808-9ff2-4af6-b650-8e4d47b77394"),
+        FirstName = "Jana",
+        LastName = "Nova",
+        PhoneNumber = "987654321",
+        BirthDate = DateTime.Parse("7/7/2000 8:30:52 AM"),
+        DepartmentId = DepartmentSeeds.Department2.Id,
+        Gender = Common.Enums.GenderEnum.Female,
+        TransportMode = Common.Enums.TransportModeEnum.Individual,
+
+        ParticipantId = ParticipantSeeds.Participant6.Id,
+    };
+
 
     public static void Seed(this ModelBuilder modelBuilder) =>
-        modelBuilder.Entity<RegistrationEntity>().HasData(Registration1, Registration2, Registration3);
+        modelBuilder.Entity<RegistrationEntity>().HasData(Registration1, Registration2, Registration3, Registration4,Registration5, Registration6);
     
         
     

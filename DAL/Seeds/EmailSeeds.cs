@@ -30,10 +30,31 @@ public static class EmailSeeds
         RegistrationId = RegistrationSeeds.Registration3.Id
 
     };
+    public static readonly EmailEntity Email4 = new()
+    {
+        Id = Guid.Parse("ee140da2-471b-49cc-a2f7-a17e45e4d603"),
+        Email = "pavel@seznam.cz",
+        RegistrationId = RegistrationSeeds.Registration4.Id
 
-  
+    };
+    public static readonly EmailEntity Email5 = new()
+    {
+        Id = Guid.Parse("d016617c-f54b-431c-ae17-e6c696e203ed"),
+        Email = "petra@seznam.cz",
+        RegistrationId = RegistrationSeeds.Registration5.Id
+
+    };
+    public static readonly EmailEntity Email6 = new()
+    {
+        Id = Guid.Parse("fd993c3f-0871-4e0f-8c7e-5e6d25f0a6a9"),
+        Email = "jana@seznam.cz",
+        RegistrationId = RegistrationSeeds.Registration6.Id
+
+    };
+
+
     public static void Seed(this ModelBuilder modelBuilder) => 
-        modelBuilder.Entity<EmailEntity>().HasData(Email1, Email2, Email3);
+        modelBuilder.Entity<EmailEntity>().HasData(Email1, Email2, Email3,Email4, Email5, Email6);
 
     
     

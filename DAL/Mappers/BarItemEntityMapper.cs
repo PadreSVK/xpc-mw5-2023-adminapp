@@ -13,6 +13,8 @@ public class BarItemEntityMapper : IEntityMapper<BarItemEntity>
         existingEntity.Unit = newEntity.Unit;
         existingEntity.UnitPrice = newEntity.UnitPrice;
         existingEntity.InStock = newEntity.InStock;
+        existingEntity.DrinkIngredient = newEntity.DrinkIngredient;
+        existingEntity.DrinkIngredientId = newEntity.DrinkIngredientId;
         existingEntity.BarInventory = newEntity.BarInventory;
         existingEntity.BarInventoryId = newEntity.BarInventoryId;
 
