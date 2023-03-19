@@ -30,7 +30,7 @@ public class RegistrationController : ControllerBase
             LastName = "mahdal",
             EmailAddress = new EmailEntity() { Email = "matej@matej", Id = Guid.NewGuid() },
             PhoneNumber = "777334077",
-            Department = new DepartmentEntity() { DepartmentName = "neco", DepartmentNumber = "1", Id = Guid.NewGuid() },
+            Department = new DepartmentEntity() { DepartmentName = "neco", DepartmentNumber = 1, Id = Guid.NewGuid() },
             BirthDate = DateTime.Now,
             Gender = Common.Enums.GenderEnum.Male,
             TransportMode = Common.Enums.TransportModeEnum.Bus
