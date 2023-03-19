@@ -2,7 +2,7 @@
 using AdminApp.DAL.Entities;
 using Microsoft.VisualBasic;
 
-namespace AdminApp.BLL.Controllers;
+namespace AdminApp.App.Controllers;
 
 [ApiController]
 [Route("[controller]")]

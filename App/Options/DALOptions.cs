@@ -1,4 +1,4 @@
-﻿namespace AdminApp.BLL.Options;
+﻿namespace AdminApp.App.Options;
 
 
 public record DALOptions

@@ -1,8 +1,8 @@
-﻿using AdminApp.BLL.Options;
+﻿using AdminApp.App.Options;
 using AdminApp.DAL;
 using Microsoft.EntityFrameworkCore;
 
-namespace AdminApp.BLL;
+namespace AdminApp.App;
 
 interface IDbMigrator
 {

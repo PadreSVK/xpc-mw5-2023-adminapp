@@ -1,11 +1,11 @@
-﻿using AdminApp.BLL.Options;
+﻿using AdminApp.App.Options;
 using AdminApp.DAL.Factories;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore;
 using AdminApp.DAL.Mappers;
 using AdminApp.DAL;
 
-namespace AdminApp.BLL;
+namespace AdminApp.App;
 
 public static class DALInstaller
 {
@@ -32,8 +32,25 @@ public static class DALInstaller
             services.AddSingleton<IDbMigrator, SqlServerDbMigrator>();
         }
 
-        services.AddSingleton<RegistrationEntityMapper>();
+        services.AddSingleton<AccomodationEntityMapper>();
+        services.AddSingleton<AccomodationTypeEntityMapper>();
+        services.AddSingleton<BarInventoryEntityMapper>();
+        services.AddSingleton<BarItemEntityMapper>();
+        services.AddSingleton<CampEntityMapper>();
+        services.AddSingleton<CurrentYearEntityMapper>();
+        services.AddSingleton<DepartmentEntityMapper>();
+        services.AddSingleton<DrinkEntityMapper>();
+        services.AddSingleton<DrinkIngredientEntityMapper>();
         services.AddSingleton<EmailEntityMapper>();
+        services.AddSingleton<ParticipantEntityMapper>();
+        services.AddSingleton<PaymentEntityMapper>();
+        services.AddSingleton<PersonalInfoEntityMapper>();
+        services.AddSingleton<RegistrationEntityMapper>();
+        services.AddSingleton<RoomMateEntityMapper>();
+        services.AddSingleton<SchoolEntityMapper>();
+        services.AddSingleton<SessionEntityMapper>();
+        services.AddSingleton<StaffAcomodationEntityMaper>();
+        services.AddSingleton<StaffEntityMapper>();
 
 
         return services;
