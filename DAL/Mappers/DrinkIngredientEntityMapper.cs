@@ -9,6 +9,7 @@ public class DrinkIngredientEntityMapper : IEntityMapper<DrinkIngredientEntity>
         existingEntity.Id = newEntity.Id;
         existingEntity.BarItem = newEntity.BarItem;
         existingEntity.NumberOfUnits = newEntity.NumberOfUnits;
+        
         existingEntity.Drink = newEntity.Drink;
         existingEntity.DrinkId = newEntity.DrinkId;
     }

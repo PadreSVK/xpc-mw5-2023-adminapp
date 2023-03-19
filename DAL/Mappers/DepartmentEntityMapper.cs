@@ -11,5 +11,7 @@ public class DepartmentEntityMapper : IEntityMapper<DepartmentEntity>
         existingEntity.DepartmentNumber = newEntity.DepartmentNumber;
         existingEntity.School = newEntity.School;
         existingEntity.SchoolId = newEntity.SchoolId; 
+        existingEntity.Registrations = newEntity.Registrations;
+        existingEntity.Staff = newEntity.Staff; 
     }
 }

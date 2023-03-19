@@ -11,7 +11,11 @@ public class RegistrationEntityMapper : IEntityMapper<RegistrationEntity>
         existingEntity.LastName = newEntity.LastName;
         existingEntity.EmailAddress = newEntity.EmailAddress;
         existingEntity.PhoneNumber = newEntity.PhoneNumber;
+        //
+        //existingEntity.Department = newEntity.Department;
         existingEntity.Department = newEntity.Department;
+        existingEntity.DepartmentId = newEntity.DepartmentId;
+
         existingEntity.BirthDate = newEntity.BirthDate;
         existingEntity.Gender = newEntity.Gender;
         existingEntity.Roommates = newEntity.Roommates;

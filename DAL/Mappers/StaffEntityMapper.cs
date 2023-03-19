@@ -11,7 +11,6 @@ public class StaffEntityMapper : IEntityMapper<StaffEntity>
         existingEntity.LastName = newEntity.LastName; 
         existingEntity.EmailAddress = newEntity.EmailAddress;
         existingEntity.PhoneNumber = newEntity.PhoneNumber; 
-        existingEntity.Department = newEntity.Department;
         existingEntity.BirthDate = newEntity.BirthDate;
         existingEntity.Gender = newEntity.Gender;
         existingEntity.AddressLine1 = newEntity.AddressLine1;
@@ -19,6 +18,8 @@ public class StaffEntityMapper : IEntityMapper<StaffEntity>
         existingEntity.City = newEntity.City;
         existingEntity.PostalCode = newEntity.PostalCode;
         existingEntity.Country = newEntity.Country;
+        existingEntity.Department = newEntity.Department;
+        existingEntity.DepartmentId = newEntity.DepartmentId;
         existingEntity.StaffAccomodation = newEntity.StaffAccomodation;
         existingEntity.StaffAccomodationId = newEntity.StaffAccomodationId;
     }

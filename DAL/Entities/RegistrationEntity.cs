@@ -10,6 +10,7 @@ public record RegistrationEntity : IEntity
     public EmailEntity EmailAddress { get; set; }
     public required string PhoneNumber { get; set; }
     public DepartmentEntity Department { get; set; }
+    public Guid DepartmentId { get; set; }
     public required DateTime BirthDate { get; set; }
     public required GenderEnum Gender { get; set; }
     public required TransportModeEnum TransportMode { get; set; }
