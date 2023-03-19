@@ -119,9 +119,25 @@ public class AdminAppDbContext : DbContext
         if (_seedDemoData)
         {
 
-           // EmailSeeds.Seed(modelBuilder);
-           // RegistrationSeeds.Seed(modelBuilder);
-            
+            SchoolSeeds.Seed(modelBuilder);
+            DepartmentSeeds.Seed(modelBuilder);
+            CurrentYearSeeds.Seed(modelBuilder);
+            CampSeeds.Seed(modelBuilder);
+            AccomodationTypeSeeds.Seed(modelBuilder);
+            SessionSeeds.Seed(modelBuilder);
+            AccomodationSeeds.Seed(modelBuilder);
+            StaffAccomodationSeeds.Seed(modelBuilder);
+            StaffSeeds.Seed(modelBuilder);
+            ParticipantSeeds.Seed(modelBuilder);
+            RegistrationSeeds.Seed(modelBuilder);
+            PersonalInfoSeeds.Seed(modelBuilder);
+            RoomMateSeeds.Seed(modelBuilder);
+            PaymentSeeds.Seed(modelBuilder);
+            BarInventorySeeds.Seed(modelBuilder);
+            DrinkSeeds.Seed(modelBuilder);
+            DrinkIngredientSeeds.Seed(modelBuilder);
+            BarItemSeeds.Seed(modelBuilder);
+            EmailSeeds.Seed(modelBuilder);
         }
     }
 }
