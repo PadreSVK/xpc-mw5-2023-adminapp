@@ -5,7 +5,6 @@ namespace AdminApp.DAL.Seeds;
 
 public static class BarInventorySeeds
 {
-
     public static readonly BarInventoryEntity BarInventory1 = new()
     {
         Id = Guid.NewGuid(),

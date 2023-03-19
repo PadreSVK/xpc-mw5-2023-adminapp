@@ -11,12 +11,14 @@ public static class DrinkIngredientSeeds
         Id = Guid.NewGuid(),
         NumberOfUnits = 1,
         DrinkId = DrinkSeeds.Drink1.Id,
+
     };
     public static readonly DrinkIngredientEntity DrinkIngredient2 = new()
     {
         Id = Guid.NewGuid(),
         NumberOfUnits = 1,
         DrinkId = DrinkSeeds.Drink2.Id,
+        
     }; 
     public static readonly DrinkIngredientEntity DrinkIngredient3 = new()
     {

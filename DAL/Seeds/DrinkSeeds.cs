@@ -5,7 +5,7 @@ namespace AdminApp.DAL.Seeds;
 
 public static class DrinkSeeds
 {
-
+    
     public static readonly DrinkEntity Drink1 = new()
     {
         Id = Guid.NewGuid(),
@@ -32,5 +32,5 @@ public static class DrinkSeeds
 
     public static void Seed(this ModelBuilder modelBuilder) =>
         modelBuilder.Entity<DrinkEntity>().HasData(Drink1, Drink2, Drink3);
-
+    
 }
