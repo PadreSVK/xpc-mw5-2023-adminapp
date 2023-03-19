@@ -5,35 +5,38 @@ namespace AdminApp.DAL.Seeds;
 
 public static class EmailSeeds
 {
-    /*
-    public static readonly EmailEntity SomeEmail = new()
-    {
-        Id = Guid.Parse("f74f5054-c552-4b4c-89db-4ac340f523e9"),
-        Email = "matej@matej",
-        RegistrationId = RegistrationSeeds.ExampleRegistration.Id
-        
-        RegistrationEntityId = Guid.Parse("db68702a-765b-43b8-8b9b-af213d69d15b"),
-        Id = Guid.Parse("f74f5054-c552-4b4c-89db-4ac340f523e9"),
-        EmailAddress = "malysa.matej@gmail.com",
-        RegistrationEntity = RegistrationSeeds.ExampleRegistration
-        
-    };
+ 
     
-    public static readonly EmailEntity SomeOtherEmail = new()
+    public static readonly EmailEntity Email1 = new()
     {
-        Id = Guid.Parse("5a7da5d6-300e-4d27-8fcb-ecc4bd7a2213"),
-        Email = "josef@josef",
-        RegistrationId = RegistrationSeeds.AnotherRegistration.Id
-        
-        RegistrationEntityId = Guid.Parse("db68702a-764b-43b8-8b9b-af213d69d15b"),
-        Id = Guid.Parse("1f54e56d-7344-4925-8c4d-fa62d54ecbdd"),
-        EmailAddress = "malysa.matej2@gmail.com",
-        RegistrationEntity = RegistrationSeeds.AnotherRegistration
-        
-    };
-    
-    public static void Seed(this ModelBuilder modelBuilder) =>
-        modelBuilder.Entity<EmailEntity>().HasData(SomeEmail, SomeOtherEmail);
+        Id = Guid.Parse("c46b865c-be42-4819-a54d-86587a20cbe0"),
+        Email = "matej@seznam.cz",
+        RegistrationId = RegistrationSeeds.Registration1.Id
 
-*/
+    };
+
+    public static readonly EmailEntity Email2 = new()
+    {
+        Id = Guid.Parse("eeb50afa-5a08-4f7e-9245-a645dc7a5459"),
+        Email = "josef@seznam.cz",
+        RegistrationId = RegistrationSeeds.Registration2.Id
+
+    };
+
+    public static readonly EmailEntity Email3 = new()
+    {
+        Id = Guid.Parse("c3ba1354-14c2-437d-abe5-36b14c9df801"),
+        Email = "jakub@seznam.cz",
+        RegistrationId = RegistrationSeeds.Registration3.Id
+
+    };
+
+  
+    public static void Seed(this ModelBuilder modelBuilder) => 
+        modelBuilder.Entity<EmailEntity>().HasData(Email1, Email2, Email3);
+
+    
+    
+
+
 }
