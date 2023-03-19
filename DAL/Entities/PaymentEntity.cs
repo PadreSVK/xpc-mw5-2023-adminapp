@@ -6,6 +6,6 @@ public record PaymentEntity : IEntity
     public required int Amount { get; set; }
 
     public Guid ParticipantId { get; set; }
-    public ParticipantEntity Participant { get; set; }
+    public ParticipantEntity? Participant { get; set; }
 }
 
