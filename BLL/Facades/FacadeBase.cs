@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using AdminApp.BLL.Facades;
-using AdminApp.BLL.Mappers;
+//using AdminApp.BLL.Mappers;
 using AdminApp.BLL.Models;
 using AdminApp.DAL.Entities;
 using AdminApp.DAL.Mappers;
@@ -15,8 +15,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace CookBook.BL.Facades;
-
+namespace AdminApp.BLL.Facades;
+/*
 public abstract class
     FacadeBase<TEntity, TListModel, TDetailModel, TEntityMapper> : IFacade<TEntity, TListModel, TDetailModel>
     where TEntity : class, IEntity
@@ -24,7 +24,7 @@ public abstract class
     where TDetailModel : class, IModel
     where TEntityMapper : IEntityMapper<TEntity>, new()
 {
-    protected readonly IModelMapper<TEntity, TListModel, TDetailModel> ModelMapper;
+    //protected readonly IModelMapper<TEntity, TListModel, TDetailModel> ModelMapper;
     protected readonly IUnitOfWorkFactory UnitOfWorkFactory;
 
     protected FacadeBase(
@@ -182,3 +182,4 @@ public abstract class
         }
     }
 }
+*/

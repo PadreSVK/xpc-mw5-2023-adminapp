@@ -1,6 +1,5 @@
 ﻿namespace AdminApp.App.Options;
 
-
 public record DALOptions
 {
     public SqlServerOptions? SqlServer { get; init; }

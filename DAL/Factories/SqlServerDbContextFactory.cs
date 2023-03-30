@@ -10,7 +10,8 @@ public class SqlServerDbContextFactory : IDbContextFactory<AdminAppDbContext>
     public SqlServerDbContextFactory(string connectionString, bool seedDemoData = true)
     {
         _seedDemoData = seedDemoData;
-        _contextOptionsBuilder.UseSqlServer(connectionString);
+        _contextOptionsBuilder.UseNpgsql(connectionString);
+        //_contextOptionsBuilder.UseSqlServer(connectionString);
     }
 
     public AdminAppDbContext CreateDbContext() => new(_contextOptionsBuilder.Options, _seedDemoData);

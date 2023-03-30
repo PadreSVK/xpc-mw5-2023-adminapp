@@ -28,10 +28,10 @@ public class RegistrationController : ControllerBase
             Id = Guid.NewGuid(),
             FirstName = "jakub",
             LastName = "mahdal",
-            EmailAddress = new EmailEntity() { Email = "matej@matej", Id = Guid.NewGuid() },
+            EmailAddress = new EmailEntity() { Email = "matej@matej", Id = Guid.NewGuid(), Password = "1234"},
             PhoneNumber = "777334077",
             Department = new DepartmentEntity() { DepartmentName = "neco", DepartmentNumber = 1, Id = Guid.NewGuid() },
-            BirthDate = DateTime.Now,
+            BirthDate = DateTime.UtcNow,
             Gender = Common.Enums.GenderEnum.Male,
             TransportMode = Common.Enums.TransportModeEnum.Bus
         };
