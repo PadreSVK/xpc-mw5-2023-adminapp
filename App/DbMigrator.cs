@@ -10,15 +10,15 @@ interface IDbMigrator
     public Task MigrateAsync(CancellationToken cancellationToken);
 }
 
-public class SqlServerDbMigrator : IDbMigrator
+public class PostgreSqlDbMigrator : IDbMigrator
 {
     private readonly IDbContextFactory<AdminAppDbContext> _dbContextFactory;
-    private readonly SqlServerOptions _sqlServerOptions;
+    private readonly PostgreSqlOptions _postgreSqlOptions;
 
-    public SqlServerDbMigrator(IDbContextFactory<AdminAppDbContext> dbContextFactory, DALOptions dalOptions)
+    public PostgreSqlDbMigrator(IDbContextFactory<AdminAppDbContext> dbContextFactory, DALOptions dalOptions)
     {
         _dbContextFactory = dbContextFactory;
-        _sqlServerOptions = dalOptions.SqlServer ?? throw new ArgumentNullException(nameof(dalOptions), $@"{nameof(DALOptions.SqlServer)} are not set");
+        _postgreSqlOptions = dalOptions.PostgreSqlServer ?? throw new ArgumentNullException(nameof(dalOptions), $@"{nameof(DALOptions.PostgreSqlServer)} are not set");
     }
 
     public void Migrate() => MigrateAsync(CancellationToken.None).GetAwaiter().GetResult();

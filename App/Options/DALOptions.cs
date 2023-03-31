@@ -2,11 +2,11 @@
 
 public record DALOptions
 {
-    public SqlServerOptions? SqlServer { get; init; }
+    public PostgreSqlOptions? PostgreSqlServer { get; init; }
 }
 
-public record SqlServerOptions
+public record PostgreSqlOptions
 {
     public bool Enabled { get; init; }
-    public string SqlServerConnection { get; init; } = null!;
+    public string PostgreSqlConnection { get; init; } = null!;
 }

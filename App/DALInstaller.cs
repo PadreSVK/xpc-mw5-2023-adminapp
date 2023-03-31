@@ -16,20 +16,20 @@ public static class DALInstaller
 
         services.AddSingleton<DALOptions>(dalOptions);
 
-        if (dalOptions.SqlServer is null)
+        if (dalOptions.PostgreSqlServer is null)
         {
             throw new InvalidOperationException("No persistence provider configured");
         }
 
-        if (dalOptions.SqlServer?.Enabled == false)
+        if (dalOptions.PostgreSqlServer?.Enabled == false)
         {
             throw new InvalidOperationException("No persistence provider enabled");
         }
         
-        if (dalOptions.SqlServer?.Enabled == true)
+        if (dalOptions.PostgreSqlServer?.Enabled == true)
         {
-            services.AddSingleton<IDbContextFactory<AdminAppDbContext>>(provider => new SqlServerDbContextFactory(dalOptions.SqlServer.SqlServerConnection));
-            services.AddSingleton<IDbMigrator, SqlServerDbMigrator>();
+            services.AddSingleton<IDbContextFactory<AdminAppDbContext>>(provider => new SqlServerDbContextFactory(dalOptions.PostgreSqlServer.PostgreSqlConnection));
+            services.AddSingleton<IDbMigrator, PostgreSqlDbMigrator>();
         }
 
         services.AddSingleton<AccomodationEntityMapper>();
