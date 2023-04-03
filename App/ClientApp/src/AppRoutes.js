@@ -1,6 +1,10 @@
-import { Counter } from "./components/Counter";
-import { FetchData } from "./components/FetchData";
+import Contact from "./components/Contact";
 import { Home } from "./components/Home";
+import { Gallery } from "./components/Gallery";
+import RegistrationForm from "./components/Registration";
+import LoginForm from "./components/Login";
+import './styles/custom.css';
+import EditRegistrationForm from "./components/EditRegistration";
 
 const AppRoutes = [
   {
@@ -8,12 +12,24 @@ const AppRoutes = [
     element: <Home />
   },
   {
-    path: '/counter',
-    element: <Counter />
+    path: '/contact',
+    element: <Contact className="full-height" />
   },
   {
-    path: '/fetch-data',
-    element: <FetchData />
+    path: '/gallery',
+    element: <Gallery className="full-height"/>
+  },
+  {
+    path: '/registration',
+    element: <RegistrationForm />
+  },
+  {
+    path: '/login',
+    element: <LoginForm />
+  },
+  {
+    path: '/edit-registration',
+    element: <EditRegistrationForm />
   }
 ];
 

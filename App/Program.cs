@@ -1,6 +1,7 @@
 using AdminApp.App;
 using AdminApp.DAL;
 using System.Reflection;
+using AdminApp.BLL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Configuration.AddConfiguration(configuration);
 
 builder.Services
     .AddDALServices(builder.Configuration)
+    .AddBLLServices()
     .AddControllersWithViews();
 
 var app = builder.Build();

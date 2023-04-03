@@ -1,0 +1,18 @@
+.active {
+    font-weight: bold;
+}
+
+.gallery-image {
+    margin: 10px;
+    max-width: 300px;
+}
+
+.full-height {
+    min-height: 75vh;
+}
+
+@media (min-width: 768px) {
+    .full-height {
+        min-height: 90vh;
+    }
+}

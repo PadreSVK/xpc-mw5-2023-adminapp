@@ -4,7 +4,7 @@ using AdminApp.BLL.Facades;
 using AdminApp.DAL.UnitOfWork;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CookBook.BL;
+namespace AdminApp.BLL;
 
 public static class BLLInstaller
 {
