@@ -1,6 +1,6 @@
 .slider-container {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     height: 250px;
