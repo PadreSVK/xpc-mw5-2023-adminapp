@@ -10,7 +10,9 @@ public class AdminAppDbContext : DbContext
 {
     private readonly bool _seedDemoData;
 
+    //todo-maintability opt in vs opt out
     public AdminAppDbContext(DbContextOptions contextOptions, bool seedDemoData = true) : base(contextOptions) => _seedDemoData = seedDemoData;
+    
     public DbSet<AccomodationEntity> AccomodationEntities => Set<AccomodationEntity>();
     public DbSet<AccomodationTypeEntity> AccomodationTypeEntities => Set<AccomodationTypeEntity>();
     public DbSet<BarInventoryEntity> BarInventoryEntities => Set<BarInventoryEntity>();
@@ -30,7 +32,7 @@ public class AdminAppDbContext : DbContext
     public DbSet<SessionEntity> SessionEntities => Set<SessionEntity>();
     public DbSet<StaffEntity> StaffEntities => Set<StaffEntity>();
 
-
+    // todo-cleancode ?
     // fix later
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -13,6 +13,7 @@ const AccommodationDetail = () => {
 
     return (
         <>
+            {/* todo-maintability mix of CS and ENG localization.. why? */}
             {state.session && state.accommodationNumber && <h1>Číslo ubytování: {state.accommodationNumber}, Turnus: {state.session}</h1>}
             <Table>
                 <thead>

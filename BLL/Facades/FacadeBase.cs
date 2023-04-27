@@ -16,6 +16,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace AdminApp.BLL.Facades;
+
+// todo-cleancode maintability
 /*
 public abstract class
     FacadeBase<TEntity, TListModel, TDetailModel, TEntityMapper> : IFacade<TEntity, TListModel, TDetailModel>

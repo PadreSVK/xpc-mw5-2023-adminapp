@@ -15,5 +15,5 @@ public record BarItemEntity : IEntity
     public Guid BarInventoryId { get; set; }
     
     
-
+// todo-cleancode spaces = dotnet format
 }

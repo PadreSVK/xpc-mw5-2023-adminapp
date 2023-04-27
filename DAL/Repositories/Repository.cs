@@ -15,8 +15,10 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, I
         _entityMapper = entityMapper;
     }
 
+    // todo-maintability exposing of IQueryable is not good idea, look at query objects 
     public IQueryable<TEntity> Get() => _dbSet;
 
+    // todo-maintability try to sanitize inputs in the upper levels (controller/BL)
     public async ValueTask<bool> ExistsAsync(TEntity entity) => entity.Id != Guid.Empty && await _dbSet.AnyAsync(e => e.Id == entity.Id);
 
     public async Task<TEntity> InsertAsync(TEntity entity) => (await _dbSet.AddAsync(entity)).Entity;
@@ -24,9 +26,11 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : class, I
     public async Task<TEntity> UpdateAsync(TEntity entity)
     {
         TEntity existingEntity = await _dbSet.SingleAsync(e => e.Id == entity.Id);
+        // todo-maintability why mapping here? 
         _entityMapper.MapToExistingEntity(existingEntity, entity);
         return existingEntity;
     }
 
+    // todo-maintability why it is not async?
     public void Delete(Guid entityId) => _dbSet.Remove(_dbSet.Single(i => i.Id == entityId));
 }

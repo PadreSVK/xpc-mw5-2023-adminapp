@@ -1,3 +1,4 @@
+<!-- todo-other todo what is BLL? -->
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -6,6 +7,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- todo-cleancode  this item group is useless -->
   <ItemGroup>
     <Folder Include="Facades\" />
     <Folder Include="Mappers\" />
@@ -16,7 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- todo-maintability why is this reference here? -->
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
+    
+    
     <PackageReference Include="Scrutor" Version="4.2.1" />
   </ItemGroup>
 

@@ -9,18 +9,24 @@ namespace AdminApp.App;
 
 public static class DALInstaller
 {
+    //todo-other / maybe move to DAL? 
     public static IServiceCollection AddDALServices(this IServiceCollection services, IConfiguration configuration)
     {
         DALOptions dalOptions = new();
         configuration.GetSection("AdminApp:DAL").Bind(dalOptions);
 
         services.AddSingleton<DALOptions>(dalOptions);
+        // todo-other
+        // services.Configure<PositionOptions>(builder.Configuration.GetSection("AdminApp:DAL"));
+        // https://andrewlock.net/adding-validation-to-strongly-typed-configuration-objects-in-dotnet-6/
 
         if (dalOptions.PostgreSqlServer is null)
         {
+            //todo-other why invalid operation? create own exception..
             throw new InvalidOperationException("No persistence provider configured");
         }
 
+        // todo-maintability why to use some flag that lead to fail on start of app? 
         if (dalOptions.PostgreSqlServer?.Enabled == false)
         {
             throw new InvalidOperationException("No persistence provider enabled");
@@ -28,6 +34,8 @@ public static class DALInstaller
         
         if (dalOptions.PostgreSqlServer?.Enabled == true)
         {
+            //todo-maintability why to not use UseNpgsql?
+            // https://www.npgsql.org/efcore/
             services.AddSingleton<IDbContextFactory<AdminAppDbContext>>(provider => new SqlServerDbContextFactory(dalOptions.PostgreSqlServer.PostgreSqlConnection));
             services.AddSingleton<IDbMigrator, PostgreSqlDbMigrator>();
         }

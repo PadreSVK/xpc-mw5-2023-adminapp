@@ -36,4 +36,6 @@ public class RegistrationController : ControllerBase
             TransportMode = Common.Enums.TransportModeEnum.Bus
         };
     }
+
+    // todo-requirements endpoints where?
 }
